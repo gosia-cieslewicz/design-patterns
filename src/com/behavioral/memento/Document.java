@@ -5,6 +5,16 @@ public class Document {
     private String fontName;
     private int fontSize;
 
+    public DocumentMemento createMemento() {
+        return new DocumentMemento(content, fontName, fontSize);
+    }
+
+    public void restore(DocumentMemento memento) {
+        this.content = memento.getContent();
+        this.fontName = memento.getFontName();
+        this.fontSize = memento.getFontSize();
+    }
+
     public String getContent() {
         return content;
     }
