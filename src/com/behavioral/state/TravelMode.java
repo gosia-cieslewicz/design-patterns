@@ -1,8 +1,6 @@
 package com.behavioral.state;
 
-public enum TravelMode {
-    DRIVING,
-    BICYCLING,
-    TRANSIT,
-    WALKING
+public interface TravelMode {
+    Object calculatingETA();
+    Object calculatingDirection();
 }
